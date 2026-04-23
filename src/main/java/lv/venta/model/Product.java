@@ -51,7 +51,7 @@ public class Product {
 	public Product() {}
 	
 	public Product(int id, String title, Category category, float price, int quantity,
-		String description}{
+		String description){
 			setId(id);
 			setTitle(title);
 			setCategory(category);
