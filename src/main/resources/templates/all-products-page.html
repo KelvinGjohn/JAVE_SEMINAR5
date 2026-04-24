@@ -1,0 +1,26 @@
+<html xmlns:th= "http://www.thymeleaf.org">
+<body>
+	<h1>MY All ProductFile in My Store </h1>
+	<table>
+		<tr>
+			<td>ID</td>
+			<td>TITLE</td>
+			<td>PRICE</td>
+			<td>QUANTITY</td>
+			<td>CATEGORY</td>
+			<td>DESCRIPTION</td>
+		</tr>
+		<tr th:each="tempP : ${package}" >
+			<td th:text= "${tempP.title}"> </td>
+			<td th:text= "${tempP.price}"> </td>
+			<td th:text= "${tempP.quantity}"> </td>
+			<td th:text= "${tempP.category}"> </td>
+			<td th:text= "${tempP.description}"> </td>
+			
+		</tr>
+	</table>
+
+	
+</body>	
+
+</html>

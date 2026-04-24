@@ -43,7 +43,7 @@ public class SimpleController {
 		
 	}
 	
-	@GetMapping("/product")//localhost:8080/product
+	@GetMapping("/all-products")//localhost:8080/all-products
 	public String getControllerAllProduct(Model model) {
 		System.out.println("The all product");
 		
@@ -54,7 +54,10 @@ public class SimpleController {
 		Product productData3 = 
 				new Product(2, "blackberry", Category.cellphones, 0.99f, 3, "brown");
 		
-		ArrayList<Product> allproducts = new ArrayList<Product>(Arrays.asList(productData1))
+		ArrayList<Product> allproducts = new ArrayList<Product>(Arrays.asList(productData1, productData2, productData3));
+		
+		model.addAttribute("package", allproducts);
+		return "all-products-page";//will show all-products-page.html file
 		
 	}
 
