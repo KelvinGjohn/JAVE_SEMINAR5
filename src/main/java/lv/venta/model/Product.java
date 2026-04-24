@@ -84,7 +84,7 @@ public class Product {
 	}
 	
 	
-	public Product() {}
+	 public Product() {}
 	
 	public Product(int id, String title, Category category, float price, int quantity,
 		String description){
@@ -96,6 +96,16 @@ public class Product {
 			setQuantity(quantity);
 			
 		}
+	
+	public Product( String title, Category category, float price, int quantity,
+			String description){
+				setTitle(title);
+				setCategory(category);
+				setPrice(price);
+				setDescription(description);
+				setQuantity(quantity);
+				
+			}
 	
 		
 		public String toString() {
