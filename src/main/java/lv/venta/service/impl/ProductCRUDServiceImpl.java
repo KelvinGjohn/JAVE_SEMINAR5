@@ -26,9 +26,14 @@ public class ProductCRUDServiceImpl implements _ProductCRUDService {
 	@Override
 	public ArrayList<Product> retrieveAllProducts() throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		if(prodRepo.count() == 0) {
+			throw new Exception("DataBase cannot be empty!");
+		}
+		else
+		{
+			return (ArrayList<Product>prodRepo.findAll();
+		}
 	}
-
 	@Override
 	public Product retrieveProductById(int id) throws Exception {
 		// TODO Auto-generated method stub
