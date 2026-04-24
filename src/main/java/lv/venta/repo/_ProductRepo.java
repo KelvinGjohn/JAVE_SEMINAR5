@@ -1,5 +1,10 @@
 package lv.venta.repo;
 
-public interface _ProductRepo {
+import org.springframework.data.repository.CrudRepository;
+
+import lv.venta.model.Product;
+
+public interface _ProductRepo extends CrudRepository<Product, Integer> {
+	
 
 }
