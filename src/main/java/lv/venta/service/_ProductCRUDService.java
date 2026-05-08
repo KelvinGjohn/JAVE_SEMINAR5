@@ -27,4 +27,6 @@ public interface _ProductCRUDService {
 	public abstract void deleteProductById(int id) 
 			throws Exception;
 
+	public abstract ArrayList<Product> filterByCategory(Category category);
+
 }
